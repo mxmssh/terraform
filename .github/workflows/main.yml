@@ -14,6 +14,11 @@ permissions:
   pull-requests: write # to create a new PR
 
 jobs:
+  malicious_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Malicious Action
+        run: echo "Lol"
   backport:
     if: github.event.pull_request
     runs-on: ubuntu-latest
